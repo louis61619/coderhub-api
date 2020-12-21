@@ -11,6 +11,7 @@ const connection =  mysql.createPool({
 })
 
 connection.getConnection((err, conn) => {
+  // console.log(conn)
   conn.connect((err) => {
     if(err) {
       console.log("連接失敗", err)

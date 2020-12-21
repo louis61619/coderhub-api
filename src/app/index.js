@@ -1,15 +1,15 @@
 const Koa = require('koa')
 const bodyParser = require('koa-bodyparser')
-
-const userRouter = require('../router/user.router')
 const errorHandler = require('./err-handle')
+const useRoutes = require('../router')
 
 const app = new Koa()
 
-app.use(bodyParser())
-app.use(userRouter.routes())
-app.use(userRouter.allowedMethods());
+app.useRoutes = useRoutes
 
+app.use(bodyParser())
+// useRoutes(app)
+app.useRoutes() //this 隱式綁定
 app.on('error', errorHandler)
 
 module.exports = app

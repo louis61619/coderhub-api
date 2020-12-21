@@ -14,9 +14,25 @@ const errorHandle = (error, ctx) => {
       status = 409; //錯誤請求 confilect
       message = "用戶名已經存在"
       break
+    case errorTypes.USER_DOES_NOT_EXISTS:
+      status = 400; //錯誤請求 confilect
+      message = "用戶不存在"
+      break
+    case errorTypes.PASSWORD_IS_INCREMENT:
+      status = 400; //錯誤請求 confilect
+      message = "密碼不正確"
+      break
+    case errorTypes.UNAUTHORIZATION:
+      status = 401;
+      message = "無效的token~"
+      break
+    case errorTypes.UNPERMISSION:
+      status = 401;
+      message = "您不具備操作權限"
+      break
     default:
       status = 404;
-      message = "NOTFOUND"
+      message = "NOT FOUND"
   }
 
   ctx.status = status;

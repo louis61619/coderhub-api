@@ -1,7 +1,15 @@
 const NAME_OR_PASSWORD_IS_REQUIRED = 'name or password cannot empty'
 const USER_ALREADY_IXISTS = 'user already exists'
+const USER_DOES_NOT_EXISTS = 'user does not exists'
+const PASSWORD_IS_INCREMENT = 'password is increment'
+const UNAUTHORIZATION = 'UNAUTHORIZATION'
+const UNPERMISSION = 'UNPERMISSION'
 
 module.exports = {
   NAME_OR_PASSWORD_IS_REQUIRED,
-  USER_ALREADY_IXISTS
+  USER_ALREADY_IXISTS,
+  USER_DOES_NOT_EXISTS,
+  PASSWORD_IS_INCREMENT,
+  UNAUTHORIZATION,
+  UNPERMISSION
 }
